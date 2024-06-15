@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellent Legal Helpers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            background: url(/Images/law.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .card {
+            transition: 0.5s;
+            /* height: 170px; */
+        }
+
+        .left:hover {
+            transform: translateX(-40px);
+        }
+
+        .right:hover {
+            transform: translateX(40px);
+        }
+
+        h3 {
+            transition: 0.3s;
+        }
+
+        h3:hover {
+            font-size: 35px;
+        }
+
+        .para {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            transition: .6s;
+        }
+
+        .para:hover {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+
+        .box-area {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 10px;
+            margin-top: 50px;
+        }
+
+        .box {
+            border-radius: 10px;
+            width: 360px;
+            margin-left: 20px;
+            height: 750px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .box-img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .overlay {
+            width: 100%;
+            background: linear-gradient(transparent, #1d1c1c 58%);
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px 15px;
+            font-size: 14px;
+            transition: height 0.5s;
+        }
+
+        .overlay h3 {
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 23px;
+            margin-top: 300px;
+            /* letter-spacing: 3px; */
+        }
+
+        .overlay a {
+            /* margin-top: 10px; */
+            color: skyblue;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: justify;
+
+        }
+
+        .boxLhover img {
+            transform: scale(1.2);
+        }
+
+        header {
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* FOOTER  SESSION STYLING*/
+        .footer {
+            width: 100%;
+            background: #00121b;
+            display: block;
+            margin-top: 50px;
+        }
+
+        .inner-footer {
+            width: 100%;
+            margin: auto;
+            padding: 30px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            justify-content: space-evenly;
+        }
+
+        .footer-items {
+            width: 30%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .footer-items p {
+            font-size: 16px;
+            text-align: justify;
+            line-height: 25px;
+            color: #fff;
+        }
+
+        .footer-items h1 {
+            color: #fff;
+        }
+
+        .border1 {
+            height: 3px;
+            width: 40px;
+            background: #ff9800;
+            color: #ff9800;
+            background-color: #ff9800;
+            border: 0px;
+        }
+
+        ul {
+            list-style: none;
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        ul a {
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        ul a:hover {
+            color: #ff9800;
+        }
+
+        ul li {
+            height: 25px;
+            margin: 1px 0;
+            padding: 4px;
+            color: #fff;
+            transition: .10s;
+        }
+
+        li i:hover {
+            transform: scale(1.5);
+        }
+
+
+        .social-media {
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+        }
+
+        .social-media i {
+            height: 25px;
+            width: 25px;
+            margin: 20px 10px;
+            padding: 4px;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .social-media i:hover {
+            transform: scale(1.5);
+        }
+
+
+        .footer-bottom {
+            border-top: 1px solid rgb(156, 153, 153);
+            padding: 17px;
+            background: #00121b;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* for tablet mode view */
+
+        @media screen and (max-width: 1275px) {
+            .footer-items {
+                width: 50%;
+            }
+        }
+
+        /* for mobile screen view */
+
+        @media screen and (max-width: 660px) {
+            .footer-items {
+                width: 100%;
+            }
+        }
+
+        .image1 {
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        /* ----------------Dropdown css------------ */
+        .dropbtn {
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(33, 37, 41);
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            margin-left: 40px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 12px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: white
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+
+        /* ---------dropdown css end----------- */
+
+        /* you can toggle the media screen view accordingly by changing the (max-width: px) to your convenience */
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ( Navbar Header Session) -->
+    <header style="position: sticky; top: 0; z-index: 1000;">
+        <div class="container-fluid  p-0 m-0">
+            <div class="row">
+                <div class="col-lg-12 p-0 m-0">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                        <img src="/Images/Symbol.jpeg" alt="" width="80px" class="image1">
+                        <a href="" class="navbar-brand">Excellent Legal Helpers</a>
+                        <button class="navbar-toggler" data-bs-target="#k-pop" data-bs-toggle="collapse">
+                            <i class="fa-solid fa-house"></i>
+                        </button>
+                        <div class="collapse navbar-collapse p-1 d-flex justify-content-end" id="kpop">
+                            <div id="k-pop" class="collapse navbar-collapse justify-content-end">
+                                <!-- <li class="nav-item"> -->
+                                    <img src="/Images/MSME.jpeg" alt="" width="80px" class="image1">
+                                <!-- </li> -->
+                               
+                                <ul class="nav navbar-nav mx-3 justify-content-end">
+                                    
+                                    <li class="nav-item">
+                                        <a href="home.html" class="mx-3 fs-5">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="BoardofAdvosroy.HTML" class="fs-5">Board of Advisory</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="dropdown">
+                                            <a href="#" class="mx-3 fs-5">Services</a>
+                                            <div class="dropdown-content">
+                                                <a href="ServicePage.html">Free Legal Aid</a>
+                                                <a href="#">Challan</a>
+                                                <a href="#">Bills</a>
+                                                <a href="#">Legal documents</a>
+                                            </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="Contactform.html" class="mx-3 fs-5">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- ====================================================================================== -->
+
+    <!-- Middle content ( Main Portion) -->
+    <main>
+        <div class="container mt-5">
+            <div class="row justify-content-evenly">
+                <p class="para text-light">BOARD OF ADVISORY</p>
+                <div class="row justify-content-evenly">
+                    <div class="col-lg-5 ">
+                        <div class="card shadow-lg border-0 left">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card-img-top">
+                                        <img src="Images/Adv.deepaksharma.jpeg" alt="" width="100%" class="ps-2 pt-2">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 p-">
+                                    <div class="card-content pt-2 ps-1">
+                                        <h3>Adv.<br> DEEPAK SHARMA</h3>
+                                        <p>Advocate of Supreme Court of India (President of board of advisory)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 ">
+                        <div class="card shadow border-0 right">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card-img-top">
+                                        <img src="Images/AdvMohit.jpeg" alt="" width="100%" class="m-2">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 p-">
+                                    <div class="card-content pt-2 ps-2">
+                                        <h3>Adv. <br> MOHIT KAUSHIK</h3>
+                                        <p>Advocate of Supreme Court of India (Member of board of advisory)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 mt-5">
+                        <div class="card shadow border-0 left">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card-img-top">
+                                        <img src="Images/Ayushiadv.jpeg" alt="" width="100%" class="p-2">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8" style="padding: 20px ;">
+                                    <div class="card-content">
+                                        <h3>Adv. <br> AYUSH SWAMI</h3>
+                                        <p>Advocate of High Court of Delhi (Member of board of advisory)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 mt-5">
+                        <div class="card shadow border-0 right">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card-img-top">
+                                        <img src="/Images/suraj.jpeg" alt="" width="100%" class="m-3">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 p-">
+                                    <div class="card-content pt-3 ps-3">
+                                        <h3>Adv. <br> SURAJ</h3>
+                                        <p>Advocate of High Court of Delhi (Member of board of advisory)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+<!-- ================================================================================= -->
+ 
+    <!-- FOOTER SESSION ( LAST SESSION ) -->
+    <footer>
+        <!--  FOOTER START -->
+
+        <div class="footer">
+            <div class="inner-footer">
+
+                <!--  for company name and description -->
+                <div class="footer-items">
+                    <h1>Excellent Legal Helpers</h1>
+                    <p>All India legal Counsel (AILC) is Now Excellent Legal Helpers(ELH) !! <br>
+                        Justice is a Complimantry Rights of every citizen !! </p>
+                </div>
+
+                <!--  for quick links  -->
+                <div class="footer-items">
+                    <h3>Quick Links</h3>
+                    <div class="border1"></div> <!--for the underline -->
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li> <a href="#">Contact Us</a></li>
+                        <li> <a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!--  for contact us info -->
+                <div class="footer-items">
+                    <h3>Contact us</h3>
+                    <div class="border1"></div>
+                    <ul>
+                        <li><i class="fa fa-map-marker me-3" aria-hidden="true"></i><a href="">New Delhi, India</a></li>
+                        <li><i class="fa fa-phone me-3" aria-hidden="true"></i><a href="">
+                                9821669624</a></li>
+                        <li><i class="fa fa-envelope me-3" aria-hidden="true"></i><a
+                                href="hrexcellentlegalhelpers@gmail.com">hrexcellentlegalhelpers@gmail.com</a></li>
+                    </ul>
+
+                    <!--   for social links -->
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/excellent_legal_helpers?igsh=MWFvczlqbG1manQ0Mg=="><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61558703671073&mibextid=rS40aB7S9Ucbxw6v"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/excellent-legal-helpers/"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--   Footer Bottom start  -->
+            <div class="footer-bottom">
+                Copyright &copy; 2020 Excellent legal helper regsted by MSME
+            </div>
+        </div>
+
+        <!--   Footer Bottom end -->
+
+        <!--   FOOTER END -->
+    </footer>
+
+
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
